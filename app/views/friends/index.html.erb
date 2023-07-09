@@ -24,11 +24,10 @@
   <tbody>
   <% @friends.each do |friend| %>
     <tr>
-      <%= render friend %>
-      
+      <%= render friend %>  
     </tr>
   <% end %>
   </tbody>
 </table>
 
-<%= link_to "New friend", new_friend_path %>
+<%= link_to "Add Friend", new_friend_path, class:'btn btn-secondary' %>
