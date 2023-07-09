@@ -2,20 +2,22 @@
 
 <h1>Friend List</h1>
 
-<table id="friends">
+<table id="friends" class='table table-striped table-hover table-bordered'>
   <thread>
-    <tr>
+    <tr class="table-success text-secondary">
       <th scope='col'>
-        <strong>First name:</strong>
+        <strong>First</strong>
       </th>
       <th scope='col'>
-        <strong>Last name:</strong>
+        <strong>Last</strong>
       </th>
       <th scope='col'>
-        <strong>Email:</strong>
+        <strong>Email</strong>
       </th>
       <th scope='col'>
-        <strong>Phone:</strong>
+        <strong>Phone</strong>
+      </th>
+      <th scope='col'>
       </th>
     </tr>
   </thread>
@@ -23,9 +25,7 @@
   <% @friends.each do |friend| %>
     <tr>
       <%= render friend %>
-      <td>
-      <%= link_to "View", friend %>
-      </td>
+      
     </tr>
   <% end %>
   </tbody>
