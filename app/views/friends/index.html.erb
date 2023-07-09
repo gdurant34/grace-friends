@@ -25,6 +25,9 @@
   <% @friends.each do |friend| %>
     <tr>
       <%= render friend %>  
+      <td>
+        <%= link_to "View", friend, class:'btn btn-secondary' %>
+      </td>
     </tr>
   <% end %>
   </tbody>
