@@ -2,13 +2,33 @@
 
 <h1>Friend List</h1>
 
-<div id="friends">
+<table id="friends">
+  <thread>
+    <tr>
+      <th scope='col'>
+        <strong>First name:</strong>
+      </th>
+      <th scope='col'>
+        <strong>Last name:</strong>
+      </th>
+      <th scope='col'>
+        <strong>Email:</strong>
+      </th>
+      <th scope='col'>
+        <strong>Phone:</strong>
+      </th>
+    </tr>
+  </thread>
+  <tbody>
   <% @friends.each do |friend| %>
-    <%= render friend %>
-    <p>
-      <%= link_to "Show this friend", friend %>
-    </p>
+    <tr>
+      <%= render friend %>
+      <td>
+      <%= link_to "View", friend %>
+      </td>
+    </tr>
   <% end %>
-</div>
+  </tbody>
+</table>
 
 <%= link_to "New friend", new_friend_path %>
