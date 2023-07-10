@@ -1,14 +1,24 @@
-
-<table class='table'>
-  <%= render @friend %>
-</table>
+<div class="card">
+  <h5 class="card-header">
+    <%= @friend.first_name %>
+    <%= @friend.last_name %>
+  </h5>
+  <div class="card-body">
+    <%# <h5 class="card-title">Special title treatment</h5>
+    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+    <a href="#" class="btn btn-primary">Go somewhere</a> %>
+    <table class='table'>
+      <%= render @friend %>
+    </table>
+  </div>
+</div>
 
 <br/>
 
 <div>
-  <%= link_to "Edit", edit_friend_path(@friend), class:'btn btn-secondary' %> |
-  <%= link_to "Back", friends_path, class:'btn btn-secondary' %> 
+  <%= link_to "Edit", edit_friend_path(@friend), class:'btn btn-outline-secondary btn-sm' %> |
+  <%= link_to "Back", friends_path, class:'btn btn-outline-secondary btn-sm' %> 
   <br/>
   <br/>
-  <%= button_to "Delete", @friend, method: :delete, class:'btn btn-secondary' %>
+  <%= button_to "Delete", @friend, method: :delete, class:'btn btn-danger btn-sm' %>
 </div>
