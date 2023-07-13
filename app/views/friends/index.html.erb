@@ -17,17 +17,23 @@
         <strong>Phone</strong>
       </th>
       <th scope='col'>
+        <strong>User Id</strong>
+      </th>
+      <th scope='col'>
       </th>
     </tr>
   </thread>
   <tbody>
   <% @friends.each do |friend| %>
+  <% if friend.user == current_user %>
     <tr>
       <%= render friend %>  
       <td>
         <%= link_to "View", friend, class:'btn btn-secondary btn-sm' %>
       </td>
     </tr>
+    <% end %>
+
   <% end %>
   </tbody>
 </table>
