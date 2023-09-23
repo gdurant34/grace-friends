@@ -1,7 +1,7 @@
 databases:
   - name: grace-friends
     databaseName: grace-friends
-    user: grace-friends
+    user: admin
 
 services:
   - type: web
