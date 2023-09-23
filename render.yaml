@@ -1,6 +1,6 @@
 databases:
   - name: grace-friends
-    databaseName: grace-friends
+    databaseName: grace-friends_development
     user: admin
 
 services:
