@@ -1,0 +1,18 @@
+databases:
+  - name: grace-friends
+    databaseName: grace-friends
+    user: grace-friends
+
+services:
+  - type: web
+    name: grace-friends
+    runtime: ruby
+    buildCommand: "./bin/render-build.sh"
+    startCommand: "bundle exec puma -C config/puma.rb"
+    envVars:
+      - key: DATABASE_URL
+        fromDatabase:
+          name: grace-friends
+          property: connectionString
+      - key: RAILS_MASTER_KEY
+        sync: false
