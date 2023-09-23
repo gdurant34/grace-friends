@@ -14,5 +14,5 @@ services:
         fromDatabase:
           name: grace-friends
           property: connectionString
-      - key: RAILS_MASTER_KEY
+      - key: 98d317b055e394daf523c34178bd0e27
         sync: false
